@@ -1,0 +1,107 @@
+main
+    position: relative
+    z-index: -2
+
+.content
+    display: flex
+    justify-content: space-between
+    &__left
+        background-color: #eee
+        max-width: 350px
+        width: 100%
+        height: 768px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    .connect
+        position: relative
+        margin-bottom: 40px
+        padding-left: 80px
+        font-size: 18px
+        font-weight: 500
+        letter-spacing: -0.45px
+        cursor: pointer
+        &::before
+            content: ""
+            position: absolute
+            width: 26px
+            height: 24px
+            bottom: 17px
+            left: 40px //80-26-14=40
+            background-image: url(../images/dest/chat.png)
+    menu
+        margin: 0
+
+.menu-items
+    padding-top: 61px
+    margin: 0
+    .menu-item
+        list-style-type: none
+        font-weight: 500
+        font-size: 18px
+        line-height: 54px
+        cursor: pointer
+    .greeting
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 26px
+            height: 23px
+            bottom: 17px
+            left: -37px
+            background-image: url(../images/dest/video.png)
+    .settings
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 26px
+            height: 26px
+            bottom: 17px
+            left: -37px
+            background-image: url(../images/dest/gear.png)
+
+.button
+    display: inline-block
+    border: none
+    // color: #fff
+    text-decoration: none
+    // background-color: #146614
+    padding: 15px 45px
+    // margin-bottom: 58px
+    // font-size: 13px
+    // text-transform: uppercase
+    // font-weight: 600
+    // letter-spacing: 3px
+    // border-radius: 10px
+    text-align: center
+    position: relative
+    outline: none
+    transition: background-color .1s ease
+    cursor: pointer
+    &:focus, &:hover
+        text-decoration: none
+        color: #fff
+    // &:hover
+    //     background-color: lighten(#146614, 5%)
+        // &::after
+        //     opacity: .22
+    // &:active
+    //     background-color: darken(#146614, 5%)
+        &::after
+            opacity: .32
+
+// tabs
+
+.menu-items .is-active
+    color: #f2b020
+    font-size: 24px
+    letter-spacing: -0.6px
+
+.content
+    .tab
+        display: none
+
+    .tab.is-active
+        display: flex

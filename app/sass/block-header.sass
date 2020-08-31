@@ -1,0 +1,66 @@
+.header
+    display: flex
+    justify-content: space-between
+    padding: 15px 40px 19px
+    z-index: 2
+    background: #fff
+    box-shadow: 0 0 52px rgba(0, 0, 0, 0.1)
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0px
+        width: 477px
+        height: 115px
+        background-image: url(../images/dest/curve_1.png)
+        z-index: -1
+    &__right, &__left
+        display: flex
+        align-items: center
+    &__link
+        margin-right: 61px
+        height: 61px
+    &__logo
+        width: 231px
+        height: 61px
+    &__title
+        font-weight: 400
+        font-size: 14px
+        letter-spacing: -0.35px
+        cursor: pointer
+.header__title span
+    text-decoration: underline
+
+.header
+    overflow: hidden
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        right: 0px
+        width: 604px
+        height: 116px
+        background-image: url(../images/dest/curve_2.png)
+        z-index: 0
+    &__left
+
+    &__right
+        // position: relative
+        z-index: 2
+        color: $basic-white
+    &__balance
+        position: relative
+        font-weight: 400
+        font-size: 14px
+        letter-spacing: -0.35px
+        color: $basic-white
+        margin-right: 39px
+    .current-balance, .current-deals
+        margin-left: 9px
+        font-size: 18px
+        font-weight: 700
+        letter-spacing: -0.45px
+        cursor: pointer
+    &__deals
+        margin-right: 91px
+        cursor: pointer
