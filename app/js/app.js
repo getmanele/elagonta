@@ -28,11 +28,11 @@ let tab = function () {
 tab();
 
 document.getElementById("visually").onclick = function () {
-  document.getElementById("die").classList.toggle("block__active");
+  document.getElementById("die").classList.add("block__active");
   document.getElementById("die").classList.remove("block__hidden");
 };
 
 document.getElementById("hidden_block").onclick = function () {
-  document.getElementById("die").classList.toggle("block__hidden");
+  document.getElementById("die").classList.add("block__hidden");
   document.getElementById("die").classList.remove("block__active");
 };
