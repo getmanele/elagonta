@@ -1,20 +1,26 @@
 @media screen and (max-width: 1200px)
-    .header
-        position: relative
+    .header__wrapper
         &::before
             left: -150px
-    .header::after
-        right: -130px
+    .header::before
+        // right: -130px
+        width: 474px
+
     .content__left
-        max-width: 200px
+        max-width: 220px
     .menu-items .is-active
-        font-size: 22px
+        // font-size: 22px
     .content menu
         padding-left: 10px
     .content .connect
-        font-size: 16px
+        padding-left: 50px
+        // font-size: 16px
+        &::before
+            left: 15px
 
 @media screen and (max-width: 1024px)
+    .die
+        right: 170px
 
     .content
         flex-direction: column
@@ -23,11 +29,14 @@
         align-items: center
         height: auto
         max-width: 1024px
+        // padding-top: 10px
+        // padding-bottom: 10px
+        padding: 10px 10px
         width: 100%
         .menu-items
             display: flex
             justify-content: space-around
-            padding-top: 20px
+            padding-top: 0px
             .greeting
                 margin-right: 50px
     .content .connect
@@ -37,86 +46,212 @@
         text-align: center
         &::before
             left: -30px
+            bottom: 8px
     .content__right__setting
         padding: 30px
     .header
-        padding: 15px 10px 19px
-        &::after
+        // padding: 15px 10px 19px
+        .header__wrapper::after
             display: flex
             right: -160px
         &__link
             margin-right: 10px
         &__title
-            display: flex
-            flex-direction: column
+            // display: flex
+            // flex-direction: column
+            // position: absolute
+            // left: 55px
     .button-wrapper
         margin-bottom: 15px
 
 @media screen and (max-width: 990px)
+    .die
+        right: 270px
+    .header::before
+        top: -15px
+    .header__wrapper
+        padding: 5px 10px 10px
+        &::before
+            top: -15px
     .header__left
         position: relative
+        flex-direction: column
+        align-items: flex-start
+        max-width: 190px
+    .header__link
+        margin-right: 0
+        height: auto
+        .header__logo
+            width: 100%
+            height: auto
     .header__title
-        position: absolute
-        left: 55px
+        display: flex
+        flex-direction: row
+    main
+        // padding-top: 85px
+    .btn-greeting
+        max-width: 650px
 
-    .content__right__greeting .video-iframe
-        width: 650px
-
+@media screen and (max-width: 768px)
+    .die
+        right: 170px
+    .header
+        &::before
+            // right: -270px 
+            width: 334px //604-270px
+        .header__wrapper
+            &::before
+                left: -250px
+    .header
+        &__deals, &__balance
+            margin: 10px
 @media screen and (max-width: 650px)
+
     .header__deals
         margin-right: 10px
-    .header::after
+    .header__wrapper::after
         right: -250px
     .content__left .menu-items
         padding-top: 10px
     .content .tab.is-active
         padding: 10px
+    .content__right__setting-title .wrapper_left
+        flex-direction: column
+        align-items: start
+    .content__right__setting-title .wrapper_right
+        align-items: flex-start
+        .status
+            padding-top: 5px
+    #bowlG
+        margin-top: 7px
+    .history::after
+        display: none
     .content__right__greeting .main-h1
         text-align: center
-    .content__right__greeting .video-iframe
-        width: 500px
     .table
         padding: 20px 10px 20px 10px
 
 @media screen and (max-width: 540px)
-    .header__title
-        display: none
-    .header::after
-        right: -320px
-    .header__link
-        display: none
+    .die
+        top: 154px
+        right: auto
+    .die__title::after
+        right: 176px
+    .die__link::before
+        right: 158px
+    .die__link::after
+        right: 171px
+
+    .header
+        &__right
+            background-color: #f2b020
+            justify-content: space-between
+            width: 100%
+            a
+                margin-right: 10px
+        &__left
+            z-index: inherit
+            align-items: center
+            max-width: 250px
+            margin-bottom: 5px
+            menu
+                width: 100%
+    .header
+        &::before
+            display: none
+        &__wrapper
+            flex-direction: column
+            align-items: center
+            padding: 10px 0 0
+            &__title
+                align-items: center
+            &__link
+                max-width: none
+        .header__wrapper::before
+            display: none
+            left: -150px
+            top: 55px
+
     .header__title
         left: 5px
+    .content__right__setting .copy-servise
+        font-size: 23px
+
+    .content__right__greeting .main-h1
+        font-size: 22px
+    .history
+        margin-right: 0
+        font-size: 23px
+
     .menu-items .menu-item
         line-height: 25px
     .menu-items .greeting::before
+        left: 3px
         bottom: 3px
     .menu-items .settings::before
+        left: 3px
         bottom: 3px
-    .content__left .menu-items .greeting
-        margin-bottom: 5px
-    .content .connect::before
-        left: -22px
+    .content__left
+        flex-direction: column
+        padding: 10px 0 0 10px
+        menu
+            width: 100%
+            padding: 0
+        .menu-items
+            padding: 0
+            width: 100%
+            align-items: baseline
+            .menu-item
+                width: 50%
+                margin: 0 0 5px
+                padding: 0 0 0 30px
+                justify-content: space-between
+            .greeting
+
+                min-width: 145px
+    .content
+        .connect
+            width: 100%
+            padding-left: 30px
+            font-size: 18px
+            text-align: left
+            br
+                display: none
+        .connect::before
+            left: 3px
+            bottom: 2px
     .history::after
         top: 25px
         right: 0
     .process::after
-        right: 115px
-        top: 58px
+        right: -53px
+        top: -3px
     .content__right__setting .button
         padding: 10px 20px
-    .content__right__greeting .video-iframe
-        width: 300px
     .table-th
         display: none
     .table-th-mob
         display: table-row
-@media screen and (max-width: 510px)
-    .content__left
-        flex-direction: column
-        .menu-items
-            flex-direction: column
-    .menu-items .menu-item
-        font-size: 18px
-    .content .connect
-        font-size: 18px
+
+@media screen and (max-width: 440px)
+
+    .content__right__setting-title
+        justify-content: center
+    .process::after
+        right: 7px
+        top: 18px
+    .content__right__setting-title .wrapper_left
+        align-items: center
+@media screen and (max-width: 390px)
+    .die
+        right: auto
+    .die__title::after
+        right: 176px
+    .die__link::before
+        right: 158px
+    .die__link::after
+        right: 171px
+
+    .header
+        .header__wrapper::after
+            left: 10px

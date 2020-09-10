@@ -15,32 +15,34 @@
     <link rel="stylesheet" href="fonts/fontawesome-free-5.14.0-web/css/solid.min.css">
   </head>
   <body class="page__body">
+    <div id="die" class="die block__hidden">
+      <p class="die__title">Чтобы активировать сервис
+        копирования сделок:</p>
+      <a class="die__link" href="javascript:void(0);">Пополните ваш торговый счет</a>
+    </div>
     <header class="header">
-      <div id="die" class="die block__hidden">
-        <p class="die__title">Чтобы активировать сервис
-          копирования сделок:</p>
-        <a class="die__link" href="javascript:void(0);">Пополните ваш торговый счет</a>
-      </div>
-      <div class="header__left">
-        <a href="" class="header__link">
-          <img
-            src="images/dest/Logo.png"
-            class="header__logo"
-            alt="header__logo"
-          />
-        </a>
-        <p class="header__title">Приветствую, <span>Иван Иванов</span></p>
-      </div>
-      <div class="header__right">
-        <p class="header__balance">Баланс:
-          <a class="current-balance">10.000$</a>
-        </p>
-        <p class="header__deals">
-          сделок:<span class="current-deals">10</span>
-        </p>
-        <a href="javascript:void(0);">
-          <img src="images/dest/exit.png" alt="выход" />
-        </a>
+      <div class="header__wrapper">
+        <div class="header__left">
+          <a href="" class="header__link">
+            <img
+              src="images/dest/Logo.png"
+              class="header__logo"
+              alt="header__logo"
+            />
+          </a>
+          <p class="header__title">Приветствую, <span>Иван Иванов</span></p>
+        </div>
+        <div class="header__right">
+          <p class="header__balance">Баланс:
+            <a class="current-balance" id="header-bal">10.000$</a>
+          </p>
+          <p class="header__deals">
+            сделок:<span class="current-deals">10</span>
+          </p>
+          <a href="javascript:void(0);">
+            <img src="images/dest/exit.png" alt="выход" />
+          </a>
+        </div>
       </div>
     </header>
     <main>
@@ -56,28 +58,23 @@
               </li>
             </ul>
           </menu>
-          <p class="connect">Связаться<br />с менеджером</p>
+          <p class="connect">Связаться <br />с менеджером</p>
         </div>
         <div class="content__right__greeting tab tab-1 is-active">
           <h2 class="main-h1">
             Добро пожаловать в проект
-            <span class="gold-h1">“Золотые Сделки”</span>
+            <span class="gold-h1"><nobr>“Золотые Сделки”</nobr></span>
           </h2>
-          <div class="greeting">
-            <iframe class="video-iframe"
-              src="https://www.youtube.com/embed/hevU4NdIsoU"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+          <div class="greeting frame_blc">
+            <iframe class="video-iframe iframe" src="https://www.youtube.com/embed/EHg7DeciuW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <button class="button btn-greeting">Начните прямо сейчас!</button>
         </div>
         <div class="content__right__setting tab tab-2">
           <h2 class="copy-servise">Сервис копирования сделок</h2>
           <div class="button-wrapper">
-            <button class="button btn-active">Активировать</button>
-            <button class="button btn-deactive">Деактивировать</button>
+            <button id="green" class="button btn-active">Активировать</button>
+            <button id="red" class="button btn-deactive">Деактивировать</button>
           </div>
 
           <div class="content__right__setting-title">
@@ -86,8 +83,14 @@
               <p class="process">Идёт процесс копирования сделок</p>
             </div>
             <div class="wrapper_right">
-              <p class="status">Статус:
-                <span class="status_green">активен</span>
+              <div id="bowlG">
+                <div id="bowl_ringG">
+                  <div id="bow_ring" class="ball_holderG block__hidden"></div>
+                </div>
+              </div>
+              <p id="status" class="status">Статус:
+                <span id="not_1" class="status_white">не</span>
+                <span id="not_2" class="status_white">активен</span>
               </p>
             </div>
             

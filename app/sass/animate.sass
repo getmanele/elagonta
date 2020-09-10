@@ -1,0 +1,36 @@
+#bowlG
+    position: relative
+    width: 28px
+    height: 28px
+    margin: auto
+    margin-left: 5px
+    margin-bottom: 2px
+
+#bowl_ringG
+    position: absolute
+    width: 28px
+    height: 28px
+    border-radius: 28px
+
+.ball_holderG
+    position: absolute
+    width: 23px
+    height: 23px
+    left: 0px
+    top: 0px
+    animation-name: ball_moveG
+    animation-duration: 1.5s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    border-right: 4px solid #808080
+    border-left: 4px solid #808080
+    border-bottom: 4px solid #f2b020
+    border-top: 4px solid #f2b020
+    border-radius: 50%
+
+@keyframes ball_moveG
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
